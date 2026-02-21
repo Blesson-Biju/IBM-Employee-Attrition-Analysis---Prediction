@@ -1,130 +1,143 @@
-# tcs-stock-price-analysis
-This project analyzes historical TCS stock data and builds a machine learning model to predict stock closing prices. An interactive Power BI dashboard is also developed for visual trend analysis.
-
-📈 TCS Stock Price Analysis & Prediction
+👩‍💼 IBM Employee Attrition Analysis & Prediction
 🔍 Project Overview
 
-This project analyzes historical stock price data of Tata Consultancy Services (TCS) and builds a machine learning model to predict future closing prices.
+Employee attrition is a major challenge for organizations due to increased hiring costs, productivity loss, and training expenses.
 
-The objective is to extract meaningful insights from historical data and support investment decision-making through predictive analytics and interactive visualization.
+This project analyzes the IBM HR Analytics dataset to:
 
-An end-to-end workflow was implemented including:
+Identify key factors influencing employee attrition
 
-Data preprocessing
+Build a machine learning model to predict attrition
 
-Exploratory Data Analysis (EDA)
+Develop an interactive Power BI dashboard for HR insights
 
-Machine learning model development
-
-Performance evaluation
-
-Interactive Power BI dashboard
+The solution combines data analysis, predictive modeling, and business visualization.
 
 🎯 Business Objective
 
-Stock markets are highly dynamic and influenced by multiple factors. By analyzing historical patterns:
+High attrition negatively impacts organizational performance.
 
-Investors can understand long-term trends
+The objective of this project is to:
 
-Volatility periods can be identified
+Understand why employees leave
 
-Predictive models can estimate future closing prices
-
-This project demonstrates how data-driven techniques can assist in financial analysis and forecasting.
+Identify high-risk employee profiles
 
 📊 Dataset Description
 
-The dataset contains historical stock data with the following features:
+Total Records: 1470
 
-Date
+Features: 35
 
-Open
+Target Variable: Attrition (Yes/No)
 
-High
+Key characteristics:
 
-Low
+~16% employees left
 
-Close
+~84% employees stayed
 
-Volume
+Imbalanced classification problem
 
-Data preprocessing steps included:
+Features include:
 
-Date formatting
+Age
 
-Handling missing values
+JobRole
 
-Feature selection
+MonthlyIncome
 
-Chronological train-test split for time-series consistency
+OverTime
+
+JobSatisfaction
+
+YearsAtCompany
+
+WorkLifeBalance
+
+Department
+
+🧹 Data Preprocessing
+
+The following steps were performed:
+
+Removed irrelevant columns (EmployeeNumber, EmployeeCount, etc.)
+
+Encoded categorical variables
+
+Handled class imbalance
+
+Train-test split
+
+Feature scaling (if applied)
+
+Special attention was given to class imbalance to ensure meaningful evaluation beyond accuracy.
 
 📈 Exploratory Data Analysis (EDA)
 
-Key insights observed:
+Key Insights:
 
-TCS shows a long-term growth trend with periodic volatility.
+Employees working overtime show higher attrition rates
 
-High trading volume often corresponds to higher price fluctuations.
+Lower monthly income correlates with higher attrition
 
-Clear upward and corrective market cycles are visible in historical data.
+Employees with fewer years at the company are more likely to leave
 
-Visualizations include:
+Job satisfaction and work-life balance significantly impact retention
 
-Closing price trend over time
-
-Volume analysis
-
-High vs Low comparison
+These insights highlight critical drivers of employee turnover.
 
 🤖 Machine Learning Model
 
-A regression-based approach was implemented to predict stock closing prices.
-
-Model Workflow:
-
-Feature selection
-
-Chronological train-test split
-
-Model training
-
-Performance evaluation
+A classification model was developed to predict employee attrition.
 
 Evaluation Metrics Used:
 
-R² Score
+Accuracy
 
-Mean Absolute Error (MAE)
+Precision
 
-Root Mean Squared Error (RMSE)
+Recall
 
-The model successfully captures the overall trend of stock movement but may show deviation during high volatility periods.
+F1-Score
+
+After handling class imbalance, the model achieved improved recall, enabling better identification of employees at risk.
+
+The focus was placed on recall and F1-score rather than accuracy due to the imbalanced nature of the dataset.
 
 📊 Power BI Dashboard
 
-An interactive dashboard was developed to provide business-friendly visualization of stock trends.
+An interactive HR dashboard was created to visualize attrition insights.
 
 Dashboard Features:
 
-Closing price trend analysis
+Overall Attrition Rate
 
-Volume distribution
+Attrition by Department
 
-Year-wise performance
+Overtime vs Attrition
 
-Date filters for dynamic exploration
+Income vs Attrition
 
-This dashboard enables investors to visually analyze historical performance and identify trend patterns effectively.
+Job Role Analysis
 
-🚀 Future Improvements
+Interactive filters for dynamic exploration
 
-Implement LSTM or advanced time-series models
+This dashboard enables HR teams to identify high-risk departments and employee segments effectively.
 
-Integrate news sentiment analysis
+🚀 Business Recommendations
 
-Include macroeconomic indicators
+Based on analysis:
 
-Deploy real-time stock prediction system
+Improve work-life balance policies
+
+Review compensation strategies for high-risk roles
+
+Monitor employees with high overtime hours
+
+Implement early retention programs for new employees
+
+Predictive analytics allows HR to move from reactive to proactive retention strategy.
 
 🛠 Tools & Technologies
 
@@ -142,6 +155,9 @@ Power BI
 
 📌 Conclusion
 
-This project demonstrates how historical financial data can be transformed into actionable insights using data analytics and machine learning techniques.
+This project demonstrates how machine learning and data visualization can be applied to solve real-world HR challenges.
 
-By combining predictive modeling with interactive visualization, the project bridges the gap between technical analysis and business decision-making.
+By identifying key attrition drivers and building a predictive model, organizations can reduce turnover costs and improve employee retention strategies.
+Enable HR to take proactive retention measures
+
+The final outcome supports data-driven HR decision-making.
